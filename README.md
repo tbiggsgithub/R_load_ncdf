@@ -2,19 +2,14 @@
 
 Metadata for GMAO netcdf files:
   LWGAB = longwave absorbed at the ground surface = LWin
-  
   LWGEM = longwave emitted at the ground surface = LWout
-  
   LWGNT = LWGAB - LWGEM
-  
   SWGDN = incoming shorwave radiation at the ground
   
 Each variable has 24 grids for a given date, one for each hour.
 
-Band 1 is for 12midnight to 1pm UTC on Day 1 (= 5 pm PST on Day 0)
-
+Band 1 is for 12midnight to 1pm UTC on Day 1 (= 5 pm PST on Day 0
   Midnight in San Diego (PST) is 8am UTC.
-  
   Midnight in San Diego (PDT) is 7am UTC.
   
 ```R
@@ -40,9 +35,7 @@ yyyyjjj.swlw = as.numeric(format(dates.swlw,"%Y%j"))  # Gives the year and julia
 plot(blw.out.11am)
 ```
 To get 24 hour mean radiation values for, e.g. San Diego for e.g. January 1, 2010:
-
   PST:  Take bands 8-24 from January 1, 2010 and bands 1-7 from January 2, 2010.
-  
   PDT:  Bands 7-24 from January 1, 2010 and bands 1-6 from January 2, 2010.
 
 For PST:
