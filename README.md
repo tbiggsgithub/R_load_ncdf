@@ -27,9 +27,9 @@ flist <- list.files(indir.sw,pattern = patt)
 x=1  # Index to the list of files
 blw.in.11am = raster(flist[x], band=19, varname = "LWGAB")
 ```
-band=19 indicates the time out of 23 bands that you want.
+band=19 indicates the time out of 24 bands that you want.
 
-Band 19 is 19:00 (7pm) UTC, or 11am Pacific Standard Time.
+Band 19 is 19:00 (7pm) UTC, or 11am PST (12pm PDT).  11am is approximate time of MODIS Terra overpass (1030am)
 
 For summer (PDT), 11am PDT is 6pm UTC (18), or band 18
 
