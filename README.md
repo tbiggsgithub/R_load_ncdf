@@ -22,7 +22,8 @@ Band 1 is for 12midnight to 1pm UTC on Day 1 (= 5 pm PST on Day 0)
 ```R
 indir = "G:/large_datasets/USA/california/modis_fluxtower_sites/GMAO/"  # Directory with a list of ncdf files
 patt="nc"
-flist <- list.files(indir.sw,pattern = patt)
+setwd(indir)
+flist <- list.files(indir,pattern = patt)
 #  Load one file from the list
 x=1  # Index to the list of files
 blw.in.11am = raster(flist[x], band=19, varname = "LWGAB")
